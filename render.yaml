@@ -1,0 +1,14 @@
+services:
+  - type: web
+    runtime: node
+    name: gods-eye-view
+    repo: https://github.com/anuragpbusiness-stack/gods-eye-view.git
+    plan: free
+    branch: main
+    buildCommand: npm ci
+    startCommand: npx vite --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: 24.21.0
+      - key: HOST
+        value: 0.0.0.0
